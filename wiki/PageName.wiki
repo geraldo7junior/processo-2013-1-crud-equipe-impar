@@ -1,6 +1,0 @@
-#summary One-sentence summary of this page.
-
-= Diagrama Entidade Relacionamento =
-
-
-<img src="https://dl.dropbox.com/s/0oohh1jk4le4k2q/Diagrama%20ER.jpg" align="left">
