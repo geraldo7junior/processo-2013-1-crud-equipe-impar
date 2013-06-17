@@ -11,19 +11,19 @@
 
 
 <tr>
-<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20VHlLbENSY09FdTQ/edit?usp=sharing"> Diagrama Entidade Relacionamento. </a>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20VHlLbENSY09FdTQ/edit?usp=sharing"> Diagrama Entidade Relacionamento </a>
 </td>
 </tr>
 </tr>
 
 <tr>
-<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20Rkc4WFZRYUlKdkU/edit?usp=sharing"> Dicionário de dados. </a>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20Rkc4WFZRYUlKdkU/edit?usp=sharing"> Dicionário de dados </a>
 </td>
 </tr>
 
 
 <tr>
-<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20N3NzYklxbW5RYWc/edit?usp=sharing"> Criação de tabelas. </a>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20N3NzYklxbW5RYWc/edit?usp=sharing"> Criação de tabelas </a>
 </td>
 </tr>
 
