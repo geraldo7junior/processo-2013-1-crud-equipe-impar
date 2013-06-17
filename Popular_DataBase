@@ -1,0 +1,71 @@
+/*Popular a tabela Consultor e tabela consultor_endereco*/
+
+insert into Consultor (Nome, Cpf,Sigla, Cor, Telefone, Celular, Email, Cargo, Stats,
+Login, Senha) values ("Jose da Silva","09349845631","J.S","C://imagens/verde.jpg","08132432299",
+"08188923345","jose@email.com","Admin",True,"Jose123","123456");
+
+select @last := LAST_INSERT_ID();
+insert into endereco_consultor (Logradouro, CEP, Numero, Complemento, Bairro, Cidade, UF, Consultor_Id)
+values ("Rua A", 55892800,23,"","Centro", "Carpina","PE",@last);
+
+insert into Consultor (Nome,Cpf, Sigla, Cor, Telefone, Celular, Email, Cargo, Stats,
+Login, Senha) values ("Maria Francisca","08238374612","M.F","C://imagens/vermelho.jpg","08136223948",
+"08197334912","Maria@email.com","User",True,"Maria124","349Ma");
+
+select @last := LAST_INSERT_ID();
+insert into endereco_consultor (Logradouro, CEP, Numero, Complemento, Bairro, Cidade, UF, Consultor_Id)
+values ("Rua B", 55834129,43,"","Centro", "Carpina","PE",@last);
+
+insert into Consultor (Nome, Cpf, Sigla, Cor, Telefone, Celular, Email, Cargo, Stats,
+Login, Senha) values ("Carlos João","09831283741","C.J","C://imagens/Amarelo.jpg","08136228911",
+"08197123411","Carlos@email.com","User",True,"Carlos12","349Ca");
+
+select @last := LAST_INSERT_ID();
+insert into endereco_consultor (Logradouro, CEP, Numero, Complemento, Bairro, Cidade, UF, Consultor_Id)
+values ("Rua C", 55890123,47," Perto da mercearia de Seu Zé","Centro", "Carpina","PE",@last);
+
+
+/*Popular a tabela Empresa e endereco_empresa*/
+
+insert into Empresa (Nome, Cnpj, Sigla, Telefone1, Telefone2) 
+values ("Maria Calçados","10747868000103","M.C","08136321123","08136213422");
+select @last := LAST_INSERT_ID();
+insert into endereco_empresa (Logradouro, CEP, Numero, Complemento, Bairro, Cidade, UF, Empresa_Id)
+values ("Rua D", 55893323, 29," Perto da padaria de Seu Chico ","Santo Antonio","Lagoa do Carro" ,"PE",@last);
+
+insert into Empresa (Nome, Cnpj, Sigla, Telefone1, Telefone2) 
+values ("Padaria Central","43666248000107","P.C","08136322339","08136219022");
+select @last := LAST_INSERT_ID();
+insert into endereco_empresa (Logradouro, CEP, Numero, Complemento, Bairro, Cidade, UF, Empresa_Id)
+values ("Rua 2", 55834523,25," ","Novo","Carpina","PE",@last);
+
+/*Popular a tabela Projeto_i*/
+
+select Id from Consultor where Nome = "Jose da Silva";
+select @last := Last_insert_id();
+insert into Projeto_i (Sigla, Descricao, Hora_inicio, Hora_fim,Data, Consultor_id)
+values ("J.U", "Projeto 1", "1442","1830","120513",@last);
+
+select Id from Consultor where Nome = "Maria Francisca";
+select @last1 := Last_insert_id();
+insert into Projeto_i (Sigla, Descricao, Hora_inicio, Hora_fim,Data, Consultor_id)
+values ("A.M", "Projeto 2", "1130","1530","090513",@last1);
+
+
+/*Popular a tabela Projeto_g*/
+select Id from Consultor where Nome = "Carlos João";
+select @last2 := Last_insert_ID();
+insert into Projeto_g (Sigla, Descricao, Hora_inicio, Hora_fim,Data, Consultor_id)
+values ("A.F", "Projeto A.F", "0930","1130","110413",@last2);
+
+/*Popular a tabela Patrocinador*/
+
+select Id from Empresa where Nome = "Maria Calçados";
+select @last := LAST_INSERT_ID();
+insert into Patrocinador (Nome, Celular, Telefone, Empresa_id)
+values ("José", 08134254031, 08188889999, @last);
+
+select Id from Empresa where Nome = "Padaria Central";
+select @last := LAST_INSERT_ID();
+insert into Patrocinador (Nome, Celular, Telefone, Empresa_id)
+values ("Joana", 08134224031, 08188887728, @last)
