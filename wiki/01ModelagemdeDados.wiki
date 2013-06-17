@@ -1,0 +1,32 @@
+<h1> Modelagem de dados </h1>
+<table border="1" cellspacing="5" cellpadding="5" width="595">
+
+<tr>
+
+<td align = middle width=110 rowspan=4> *Semana de nivelamento* </td>
+
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20WVpEUGwxMzdId1k/edit?usp=sharing"> Modelo Entidade Relaciomamento </a></td>
+
+
+
+
+<tr>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20VHlLbENSY09FdTQ/edit?usp=sharing"> Diagrama Entidade Relacionamento. </a>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20Rkc4WFZRYUlKdkU/edit?usp=sharing"> Dicionário de dados. </a>
+</td>
+</tr>
+
+
+<tr>
+<td width=80%> <a href="https://docs.google.com/file/d/0B2OO24xvoA20N3NzYklxbW5RYWc/edit?usp=sharing"> Criação de tabelas. </a>
+</td>
+</tr>
+
+
+
+<table>
