@@ -73,7 +73,7 @@ DROP TABLE IF EXISTS `Patrocinador` ;
 
 SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `Patrocinador` (
-  `Id` INT NOT NULL ,
+  `Id` INT NOT NULL AUTO_INCREMENT ,
   `Nome` VARCHAR(45) NOT NULL ,
   `Celular` INT(11) NOT NULL ,
   `Telefone` VARCHAR(11) NOT NULL ,
@@ -137,7 +137,7 @@ CREATE  TABLE IF NOT EXISTS `Projeto_g` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-USE `mydb` ;
+USE `Projeto` ;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
