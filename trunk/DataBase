@@ -1,0 +1,145 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+DROP SCHEMA IF EXISTS `Projeto` ;
+CREATE SCHEMA IF NOT EXISTS `Projeto` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+SHOW WARNINGS;
+USE `Projeto` ;
+
+-- -----------------------------------------------------
+-- Table `Consultor`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Consultor` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `Consultor` (
+  `Id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `Nome` VARCHAR(50) NOT NULL ,
+  `Cpf` VARCHAR(11) NOT NULL ,
+  `Sigla` VARCHAR(6) NOT NULL ,
+  `Cor` VARCHAR(50) NOT NULL ,
+  `Telefone` VARCHAR(11) NOT NULL ,
+  `Celular` VARCHAR(11) NOT NULL ,
+  `Email` VARCHAR(20) NOT NULL ,
+  `Cargo` VARCHAR(45) NOT NULL ,
+  `Stats` TINYINT(1) NOT NULL ,
+  `Login` VARCHAR(15) NOT NULL ,
+  `Senha` VARCHAR(15) NOT NULL ,
+  PRIMARY KEY (`Id`, `Cpf`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `Empresa`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Empresa` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `Empresa` (
+  `Id` INT NOT NULL AUTO_INCREMENT ,
+  `Nome` VARCHAR(50) NOT NULL ,
+  `Cnpj` VARCHAR(12) NOT NULL ,
+  `Sigla` VARCHAR(45) NOT NULL ,
+  `Telefone1` VARCHAR(11) NOT NULL ,
+  `Telefone2` VARCHAR(11) NOT NULL ,
+  PRIMARY KEY (`Id`, `Cnpj`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `Projeto_i`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Projeto_i` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `Projeto_i` (
+  `Sigla` VARCHAR(6) NOT NULL ,
+  `Descricao` VARCHAR(50) NULL ,
+  `Hora_inicio` VARCHAR(6) NOT NULL ,
+  `Hora_fim` VARCHAR(6) NOT NULL ,
+  `Data` VARCHAR(10) NOT NULL ,
+  `Consultor_Id` INT(11) NOT NULL )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `Patrocinador`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Patrocinador` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `Patrocinador` (
+  `Id` INT NOT NULL ,
+  `Nome` VARCHAR(45) NOT NULL ,
+  `Celular` INT(11) NOT NULL ,
+  `Telefone` VARCHAR(11) NOT NULL ,
+  `Empresa_Id` INT NOT NULL ,
+  PRIMARY KEY (`Id`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `endereco_consultor`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `endereco_consultor` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `endereco_consultor` (
+  `Logradouro` VARCHAR(50) NOT NULL ,
+  `CEP` INT(8) NOT NULL ,
+  `Numero` INT(11) NOT NULL ,
+  `Complemento` VARCHAR(45) NULL ,
+  `Bairro` VARCHAR(20) NOT NULL ,
+  `Cidade` VARCHAR(20) NOT NULL ,
+  `UF` VARCHAR(2) NOT NULL ,
+  `Consultor_Id` INT(11) NOT NULL )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `endereco_empresa`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `endereco_empresa` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `endereco_empresa` (
+  `Logradouro` VARCHAR(50) NOT NULL ,
+  `CEP` INT(8) NOT NULL ,
+  `Numero` INT(11) NOT NULL ,
+  `Complemento` VARCHAR(45) NULL ,
+  `Bairro` VARCHAR(20) NOT NULL ,
+  `Cidade` VARCHAR(20) NOT NULL ,
+  `UF` VARCHAR(2) NOT NULL ,
+  `Empresa_Id` INT NOT NULL )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `Projeto_g`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Projeto_g` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `Projeto_g` (
+  `Sigla` VARCHAR(6) NOT NULL ,
+  `Descricao` VARCHAR(50) NULL ,
+  `Hora_inicio` VARCHAR(6) NOT NULL ,
+  `Hora_fim` VARCHAR(6) NOT NULL ,
+  `Data` VARCHAR(10) NOT NULL ,
+  `Consultor_Id` INT(11) NOT NULL )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+USE `mydb` ;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
