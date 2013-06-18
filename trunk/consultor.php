@@ -149,7 +149,7 @@ function SomenteLetra(e){
 
 				<label for="txttelefone">Telefone:</label> <input type="text" id="txttelefone" size="10%" accesskey="T" Value="" maxlength="14" /><br />
 
-				<label for="txtcelular">Celular:</label> <input type="text" id="txtcelular" size="12%"  accesskey="CEL" Value="" maxlength="15" />
+				<label for="txtcelular">Celular:</label> <input type="text" id="txtcelular" size="12%"  accesskey="CEL" Value="" maxlength="14" />
 
 				<label for="txtemail">E-mail:</label> <input type="text" id="txtemail" name="Email" accesskey="E" Value="" onBlur="ValidaEmail();" />
 			
@@ -168,7 +168,7 @@ function SomenteLetra(e){
 
 				<label for="txtnumero">Número: </label><input maxlength="5" type="text" onkeypress='return SomenteNumero(event)' id="txtnumero" size="4%" accesskey="NUM" />
 
-				<label for="txtcomplemento">Complemento:</label><input maxlength="4" type="text" size="2%" id="txtcomplemento" accesskey="COM" />
+				<label for="txtcomplemento">Complemento:</label><input maxlength="40" type="text" size="20%" id="txtcomplemento" accesskey="COM" />
 
 
 				<label for="txtbairro">Bairro: </label><input id="txtbairro" maxlength="45" type="text" accesskey="B" /><br />

@@ -132,7 +132,7 @@ function SomenteLetra(e){
 		
 			<fieldset id="dadosempresa">
 				<legend>Dados da Empresa</legend>
-				<label for="txtnome">Nome:</label> <input type="text" id="txtnome" accesskey="N" Value="" size="30%" onkeypress='return SomenteLetra(event)' onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
+				<label for="txtnome">Nome:</label> <input type="text" id="txtnome" accesskey="N" Value="" size="30%" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
 
 				<label for="txtsigla">Sigla:</label> <input type="text" id="txtsigla" accesskey="S" Value="" maxlength="4" size="3%" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
 
@@ -156,7 +156,7 @@ function SomenteLetra(e){
 
 					<label for="txtnumero">Número: </label><input maxlength="5" type="text" size="5%" id="txtnumero" accesskey="NUM" onkeypress='return SomenteNumero(event)' onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
 
-					<label for="txtcomplemento">Complemento:</label><input maxlength="4" type="text" size="2%" id="txtcomplemento" accesskey="COM" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />	
+					<label for="txtcomplemento">Complemento:</label><input maxlength="40" type="text" size="20%" id="txtcomplemento" accesskey="COM" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />	
 
 
 					<label for="txtbairro">Bairro: </label><input id="txtbairro" maxlength="45" type="text" accesskey="B" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" /><br />
@@ -202,7 +202,7 @@ function SomenteLetra(e){
 
         		<label for="txtTelefonepatrocinador">Telefone:</label><input type="text" id="txttelefonepatrocinador" accesskey="TEL" maxlength="14" value="" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
 
-        		<label for="txtcelularpatrocinador">Celular:</label><input type="text" id="txtcelularpatrocinador" accesskey="Cel" maxlength="15" value="" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
+        		<label for="txtcelularpatrocinador">Celular:</label><input type="text" id="txtcelularpatrocinador" accesskey="Cel" maxlength="14" value="" onfocus="this.style.backgroundColor='#F0FFF0'" onblur="this.style.backgroundColor='#ffffff'" />
 
         		
 			</fieldset> 
